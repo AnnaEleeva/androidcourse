@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="64dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <TextView
+        android:id="@+id/bottom_sheet_header"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/primary_light"
+        android:gravity="start|center"
+        android:padding="@dimen/text_margin"
+        android:text="@string/bottom_name"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        style="@style/TextHorizontalPaddings"
+        android:paddingTop="@dimen/text_margin"
+        android:paddingBottom="@dimen/text_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/searchEdit"
+            android:text="@string/search"
+            android:textColor="@color/primary_text" />
+
+        <EditText
+            android:id="@+id/searchEdit"
+            style="@style/Text.SingleLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/searchHint"
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences"
+            android:text="@={model.searchWord}"
+            android:paddingStart="@dimen/text_margin"
+            android:paddingLeft="@dimen/text_margin"
+            android:paddingEnd="@dimen/text_margin"
+            android:paddingRight="@dimen/text_margin"
+            tools:text="Введите название привычки" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/text_margin"
+        style="@style/TextHorizontalPaddings">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sorting"
+            android:textColor="@color/primary_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:orientation="horizontal"
+            style="@style/TextHorizontalPaddings">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="@string/sort_by_name" />
+
+            <RadioGroup
+                android:id="@+id/nameRadio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_name_asc"
+                    style="@style/SortRadioButton"
+                    android:text="@string/sort_name_asc" />
+
+                <RadioButton
+                    android:id="@+id/radio_name_desc"
+                    style="@style/SortRadioButton"
+                    android:text="@string/sort_name_desc" />
+
+                <RadioButton
+                    android:id="@+id/radio_name_none"
+                    style="@style/SortRadioButton"
+                    android:checked="true"
+                    android:text="@string/sort_none" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:orientation="horizontal"
+            style="@style/TextHorizontalPaddings">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="@string/sort_days" />
+
+            <RadioGroup
+                android:id="@+id/periodicityRadio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_periodicity_asc"
+                    style="@style/SortRadioButton"
+                    android:text="@string/sort_days_asc" />
+
+                <RadioButton
+                    android:id="@+id/radio_periodicity_desc"
+                    style="@style/SortRadioButton"
+                    android:text="@string/sort_days_desc" />
+
+                <RadioButton
+                    android:id="@+id/radio_periodicity_none"
+                    style="@style/SortRadioButton"
+                    android:checked="true"
+                    android:text="@string/sort_none" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

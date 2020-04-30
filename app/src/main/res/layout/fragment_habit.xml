@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/hz"
+    android:orientation="horizontal"
+    android:gravity="start"
+    android:layout_marginBottom="1dp">
+
+
+
+    <View android:id="@+id/priorityLow"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary_dark"
+        android:layout_marginEnd="10dp"
+        android:layout_weight=".015"
+        android:layout_marginRight="5dp" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".9">
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:text="Description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="horizontal">
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:text="Type" />
+
+                <TextView
+                    android:id="@+id/priority"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="Priority" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/periodicity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Period" />
+
+                <TextView
+                    android:id="@+id/repeats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Repeats" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View android:id="@+id/priorityBottom"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/primary_dark"
+            android:layout_marginEnd="10dp"
+            android:layout_weight=".015"
+            android:layout_marginRight="5dp" />
+    </LinearLayout>
+
+</LinearLayout>

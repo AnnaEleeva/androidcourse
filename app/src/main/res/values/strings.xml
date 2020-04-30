@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Запоминашка</string>
+    <string name="newHabitActivity_barTitle">Новая привычка</string>
+    <string name="editHabitActivity_barTitle">Редактирование</string>
+    <string name="addHabit">Добавить привычку</string>
+    <string name="habitName">Название</string>
+    <string name="habitNameHint">Название</string>
+    <string name="habitDescription">Описание</string>
+    <string name="save">Сохранить</string>
+    <string name="habitPriority">Приоритет</string>
+    <string name="habitType">Тип</string>
+    <string name="good">Хорошая</string>
+    <string name="bad">Плохая</string>
+    <string name="required_field_error">Поле обязательно</string>
+    <string name="periodicity">Периодичность</string>
+    <string name="days">дней</string>
+    <string name="numberHint">10</string>
+    <string name="timesEvery">%s, каждые</string>
+    <string name="every">каждые</string>
+    <string name="habitColor">Цвет привычки</string>
+    <string name="aboutScreen_barTitle">О приложении</string>
+    <string name="open_drawer">Открыть меню</string>
+    <string name="close_drawer">Закрыть меню</string>
+    <string name="menu_item_home">Домой</string>
+    <string name="menu_item_about">О приложении</string>
+    <string name="tab_name_good">Хорошие</string>
+    <string name="tab_name_bad">Плохие</string>
+    <string name="bottom_name">Фильтры и сортировки</string>
+    <string name="sort_by_name">По названию</string>
+    <string name="sort_name_asc">А-Я</string>
+    <string name="sort_name_desc">Я-А</string>
+    <string name="sort_none">Нет</string>
+    <string name="sort_days">По дням</string>
+    <string name="sort_days_asc">0..9</string>
+    <string name="sort_days_desc">9..0</string>
+    <string name="search">Поиск</string>
+    <string name="searchHint">Введите название привычки</string>
+    <string name="sorting">Сортировка</string>
+    <string name="no_habits">Привычек нет.\nПроверьте фильтр или создайте новые</string>
+
+    <string-array name="priority_array">
+        <item>Низкий</item>
+        <item>Средний</item>
+        <item>Высокий</item>
+    </string-array>
+
+    <plurals name="days">
+        <item quantity="zero">дней</item>
+        <item quantity="one">день</item>
+        <item quantity="two">дня</item>
+        <item quantity="few">дня</item>
+        <item quantity="many">дней</item>
+        <item quantity="other">дней</item>
+    </plurals>
+
+    <plurals name="times">
+        <item quantity="zero">раз</item>
+        <item quantity="one">раз</item>
+        <item quantity="two">раза</item>
+        <item quantity="few">раза</item>
+        <item quantity="many">раз</item>
+        <item quantity="other">раз</item>
+    </plurals>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
