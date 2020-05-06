@@ -1,10 +1,16 @@
 package com.example.androidcourse.core
-import android.os.Parcelable
+
 import androidx.room.Entity
-import kotlinx.android.parcel.Parcelize
+import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import com.example.androidcourse.CalendarConverter
+import com.example.androidcourse.HabitTypeConverter
+import com.example.androidcourse.PriorityConverter
+import com.example.androidcourse.UUIDConverter
 import java.util.*
-@Parcelize
+
 @Entity(tableName = "habits")
+@TypeConverters(PriorityConverter::class, HabitTypeConverter::class, CalendarConverter::class, UUIDConverter::class)
 class Habit(
     val name: String,
     val description: String,
@@ -13,7 +19,7 @@ class Habit(
     val repetitions: Int = 10,
     val periodicity: Int = 2,
     val color: String = "#388E3C",
-    val id: UUID = UUID.randomUUID(), //уникальный id назначается автоматически
+    @PrimaryKey
+    val id: UUID = UUID.randomUUID(),
     val creationDate: Calendar = Calendar.getInstance()
-) : Parcelable {
-}
+)

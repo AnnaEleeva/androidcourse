@@ -6,6 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.androidcourse.core.HabitType
 import com.example.androidcourse.fragments.HabitListFragment
 
+
 class HabitsListPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
     override fun createFragment(position: Int): Fragment {
         return when (position) {

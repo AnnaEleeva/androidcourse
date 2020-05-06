@@ -16,6 +16,7 @@ import com.example.androidcourse.core.HabitType
 import com.example.androidcourse.databinding.FragmentEditHabitBinding
 import com.example.androidcourse.viewmodels.EditableHabitViewModel
 import kotlinx.android.synthetic.main.fragment_edit_habit.*
+import java.util.*
 
 
 class EditHabitFragment : Fragment() {
@@ -63,9 +64,17 @@ class EditHabitFragment : Fragment() {
 
     }
 
-   fun update(habitToEdit: Habit) {
-       model.update(habitToEdit)
+    fun update(habitType: HabitType) {
+        model.type = habitType
+        update()
+    }
 
+    fun update(habitId: UUID) {
+        model.update(habitId)
+        update()
+    }
+
+    private fun update() {
         binding.invalidateAll()
 
         habitTypeRadio.check(
@@ -77,9 +86,7 @@ class EditHabitFragment : Fragment() {
 
         habitPriority.setSelection(model.priority.value)
     }
-    fun getHabit(): Habit {
-        return model.getHabit()
-    }
+    fun saveHabit() = model.saveHabit()
 
 
 }
